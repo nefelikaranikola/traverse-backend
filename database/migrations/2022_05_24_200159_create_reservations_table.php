@@ -17,11 +17,12 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('package_id');
-            $table->string('first_name', 50);
-            $table->string('last_name', 50);
-            $table->string('email', 100);
-            $table->string('phone', 14);
-            $table->text('address');
+            $table->boolean('different_client')->default(false);
+            $table->string('first_name', 50)->nullable();
+            $table->string('last_name', 50)->nullable();
+            $table->string('email', 100)->nullable();
+            $table->string('phone', 14)->nullable();
+            $table->text('address')->nullable();
             $table->timestamps();
         });
     }

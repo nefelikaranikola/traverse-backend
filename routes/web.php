@@ -13,16 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//welcome blade is not inside another folder
-Route::get('/', 'PagesController@index');
-
-//about page etc are inside a parent folder so we need to specify the path, we can use pages.path instead of pages/path
-/*Route::get('/about', function() {
-    return view('pages.about');
-});*/
-
-Route::get('/about', 'PagesController@about');
-Route::get('/support', 'PagesController@support');
-Route::get('/guides', 'PagesController@guides');
-Route::get('/recomended', 'PagesController@recomended');
-Route::get('/agencies', 'PagesController@agencies');
+Route::get('/', function () {
+    return view('welcome');
+});

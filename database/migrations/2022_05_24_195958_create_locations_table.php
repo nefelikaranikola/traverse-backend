@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('package_id');
             $table->string('description');
-            $table->decimal('long', 11, 6);
             $table->decimal('lat', 11, 6);
+            $table->decimal('long', 11, 6);
             $table->timestamps();
         });
     }
